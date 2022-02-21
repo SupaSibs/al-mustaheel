@@ -29,6 +29,7 @@ let support = (function () {
 
 
 function createDOMMAP(element) {
-	return element.childNodes;
+return Array.prototype.map.call(element.childNodes, (function (node) {
+		return node;
 };
 
