@@ -28,5 +28,7 @@ let support = (function () {
 };
 
 
-
+function createDOMMAP(element) {
+	return element.childNodes;
+};
 
