@@ -2,7 +2,7 @@
 
 let support = (function () {
 	if (!window.DOMParser) return false;
-	var parser = new DOMParser();
+	let parser = new DOMParser();
 	try {
 		parser.parseFromString('x', 'text/html');
 	} catch(err) {
