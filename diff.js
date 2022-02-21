@@ -1,3 +1,5 @@
+
+
 let support = (function () {
 	if (!window.DOMParser) return false;
 	var parser = new DOMParser();
@@ -22,6 +24,9 @@ let support = (function () {
 	// Otherwise, fallback to old-school method
 	let dom = document.createElement('div');
 	dom.innerHTML = str;
-	return dom;
-
+	return dom
 };
+
+
+
+
