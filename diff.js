@@ -29,7 +29,14 @@ let support = (function () {
 
 
 function createDOMMAP(element) {
-return Array.prototype.map.call(element.childNodes, (function (node) {
-		return node;
+	return Array.prototype.map.call(element.childNodes, (function (node) {
+		var details = {
+			content: node.childNodes && node.childNodes.length > 0 ? null : node.textContent,
+			atts: node.nodeType !== 1 ? [] : getAttributes(node.attributes),
+			type: '',
+			node: node
+		};
+		return details;
+	}));
 };
 
