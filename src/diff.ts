@@ -1,6 +1,6 @@
-//import {render} from "jsx-to-idom";
-//impport {patch} from "incremental-dom";
+import {render as rend} from "jsx-to-idom";
+import {patch} from "incremental-dom";
 
 function render(fn: function, node) {
-//patch(node, () => render(fn()))
+patch(node, () => rend(fn()))
 }
